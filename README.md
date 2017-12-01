@@ -44,6 +44,14 @@ kubectl delete -f  be-rc.yaml
 docker build -t be .
 docker run --rm -p 3000:3000 be
 
+Work around until yml files work:
+
+https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app?authuser=1
+
+kubectl run be-rc --image=gcr.io/testkube-187517/be --port 3000
+ 
+kubectl expose deployment be-rc --type=LoadBalancer --port 80 --target-port 3000
+http://35.203.157.252/dogparks
 Utilities
 
 ###!/bin/bash
