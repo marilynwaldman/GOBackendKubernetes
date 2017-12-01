@@ -14,11 +14,12 @@ gcloud container clusters create kubetest --num-nodes=3
 
 git clone https://github.com/marilynwaldman/webappDogPark.git
 
-cd kub*
+cd web*
+cd api
 
-
-cd ../be
-   docker build -t be .
+docker build -t be .
+docker tag be gcr.io/testkube-187517/be
+gcloud docker -- push gcr.io/testkube-187517/be
 
 cd ..
 
@@ -26,12 +27,6 @@ kubectl create -f  be-rc.yaml
 kubectl create -f  be-srv.yaml
 
 kubectl get service
-
-
-docker tag be gcr.io/testkube-187517/be
-
-
-gcloud docker -- push gcr.io/testkube-187517/be
 
 curl http://....
 

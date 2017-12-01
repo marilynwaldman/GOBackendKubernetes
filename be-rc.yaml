@@ -6,7 +6,7 @@ metadata:
   labels:
     type: be-type
 spec:
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -20,6 +20,8 @@ spec:
         - containerPort: 3000
           protocol: TCP
         env:
+        - name: USER_VAR
+          value: important information
         - name: POD_NAME
           valueFrom:
             fieldRef:
