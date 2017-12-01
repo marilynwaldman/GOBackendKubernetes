@@ -1,13 +1,14 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: be-srv
+  name: be-rc
   labels:
-    type: be-type
+    name: outyet
 spec:
   ports:
-  - name: be
-    port: 3000
-    protocol: TCP
+    — port: 80
+      targetPort: 3000
+      protocol: TCP
   selector:
-    type: be-type
+    name: be-rc
+  type: LoadBalancer
