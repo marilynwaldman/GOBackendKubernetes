@@ -12,7 +12,7 @@ gcloud config set compute/zone us-west1-b
 
 gcloud container clusters create kubetest --num-nodes=3
 
-git clone https://github.com/marilynwaldman/kubefrontback.git
+git clone https://github.com/marilynwaldman/webappDogPark.git
 
 cd kub*
 
