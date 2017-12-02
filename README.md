@@ -18,8 +18,8 @@ cd web*
 cd api
 
 docker build -t be .
-docker tag be gcr.io/testkube-187517/be
-gcloud docker -- push gcr.io/testkube-187517/be
+docker tag be gcr.io/testkube-187517/gceme
+gcloud docker -- push gcr.io/testkube-187517/gceme
 
 cd ..
 

@@ -14,7 +14,7 @@ spec:
       version: “1”
   spec:
     containers:
-      — image: gcr.io/testkube-187517/be
+      — image: gcr.io/jenkins-187820/be
         name: be-container
         ports:
           — containerPort: 3000
