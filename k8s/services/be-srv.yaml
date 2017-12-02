@@ -11,4 +11,4 @@ spec:
   selector:
     role: backend
     app: backend
-  tyoe: LoadBalancer
+  type: LoadBalancer
