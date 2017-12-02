@@ -18,7 +18,7 @@ cd web*
 cd api
 
 docker build -t backend .
-docker tag be gcr.io/jenkins-187820/backend
+docker tag backend gcr.io/jenkins-187820/backend
 gcloud docker -- push gcr.io/jenkins-187820/backend
 
 cd ..

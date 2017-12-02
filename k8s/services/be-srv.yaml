@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: gceme-backend
+  name: dogopark-backend
 spec:
   ports:
   - name: http
@@ -11,3 +11,4 @@ spec:
   selector:
     role: backend
     app: backend
+  tyoe: LoadBalancer
