@@ -7,7 +7,7 @@ Push to Google Cloud without CORS first.  Check with Curl.
 This works!!!!
 
 
-gcloud config set project testkube-187517
+gcloud config set project jenkins-187820
 gcloud config set compute/zone us-west1-b 
 
 gcloud container clusters create kubetest --num-nodes=3
@@ -17,9 +17,9 @@ git clone https://github.com/marilynwaldman/webappDogPark.git
 cd web*
 cd api
 
-docker build -t be .
-docker tag be gcr.io/testkube-187517/gceme
-gcloud docker -- push gcr.io/testkube-187517/gceme
+docker build -t backend .
+docker tag be gcr.io/jenkins-187820/backend
+gcloud docker -- push gcr.io/jenkins-187820/backend
 
 cd ..
 
