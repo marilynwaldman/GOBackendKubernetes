@@ -28,8 +28,8 @@ node {
     case "master":
         // Change deployed image in canary to the one we just built
         sh("sed -i.bak 's#gcr.io/jenkins-187820/backend#${imageTag}#' ./k8s/production/*.yaml")
-        sh("kubectl --namespace=production apply -f k8s/services/")
         sh("kubectl --namespace=production apply -f k8s/production/")
+        sh("kubectl --namespace=production apply -f k8s/services/")
         sh("echo http://`kubectl --namespace=production get service/${feSvcName} --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
         break
 

@@ -3,12 +3,6 @@ This is a test GO RESTFUL API used to test Jenkins on a Google Cloud platform.
 
 
 
-
-
-
-
-
-
 Push to Google Cloud without CORS first.  Check with Curl.
 
 ### Tutorial from :
