@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: dogopark-backend
+  name: dogpark-backend
 spec:
   ports:
   - name: http
@@ -10,5 +10,5 @@ spec:
     protocol: TCP
   selector:
     role: backend
-    app: backend
+    app: dogpark
   type: LoadBalancer
