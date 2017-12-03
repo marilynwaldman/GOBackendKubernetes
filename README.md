@@ -9,7 +9,7 @@ Push to Google Cloud without CORS first.  Check with Curl.
     https://medium.com/google-cloud/running-a-simple-kubernetes-frontend-backend-service-on-google-cloud-platform-85eb0346f600
 
 
-
+#### Manual Instruction for testing;  follow with Jenkins workflow
 
 gcloud config set project jenkins-187820
 gcloud config set compute/zone us-west1-b 
