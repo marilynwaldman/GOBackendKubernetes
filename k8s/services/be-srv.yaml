@@ -3,12 +3,12 @@ apiVersion: v1
 metadata:
   name: dogpark-backend
 spec:
+  type: LoadBalancer
   ports:
   - name: http
-    port: 3000
-    targetPort: 3000
+    port: 80
+    targetPort: 80
     protocol: TCP
   selector:
-    role: backend
     app: dogpark
-  type: LoadBalancer
+    role: backend
