@@ -15,9 +15,9 @@ gcloud container clusters create kubetest --num-nodes=3
 git clone https://github.com/marilynwaldman/webappDogPark.git
 
 cd web*
-cd api
 
-docker build -t backend .
+
+docker build -t backend api
 docker tag backend gcr.io/jenkins-187820/backend
 gcloud docker -- push gcr.io/jenkins-187820/backend
 

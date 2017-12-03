@@ -1,5 +1,5 @@
 node {
-  def project = 'jenkin5-187120'
+  def project = 'jenkins-187820'
   def appName = 'backend'
   def feSvcName = "${appName}-frontend"
   def imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
