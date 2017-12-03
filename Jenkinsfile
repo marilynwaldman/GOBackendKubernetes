@@ -6,12 +6,9 @@ node {
 
   checkout scm
 
-  dir ('api') {
-      sh 'pwd'
-  }
 
   stage 'Build image'
-  sh("docker build -t ${imageTag} .")
+  sh("docker build -t ${imageTag} api")
 
   stage 'Push image to registry'
   sh("gcloud docker -- push ${imageTag}")
@@ -24,7 +21,7 @@ node {
         sh("sed -i.bak 's#gcr.io/jenkins-187820/backend#${imageTag}#' ./k8s/canary/*.yaml")
         sh("kubectl --namespace=production apply -f k8s/services/")
         sh("kubectl --namespace=production apply -f k8s/canary/")
-        sh("echo http://`kubectl --namespace=production get service/${feSvcName} --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
+        sh("echo http://`kubectl cd--namespace=production get service/${feSvcName} --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
         break
 
     // Roll out to production
