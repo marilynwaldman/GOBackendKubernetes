@@ -1,10 +1,20 @@
 
+This is a test GO RESTFUL API used to test Jenkins on a Google Cloud platform.
+
+
+
+
+
+
+
+
+
 Push to Google Cloud without CORS first.  Check with Curl.
 
 ### Tutorial from :
     https://medium.com/google-cloud/running-a-simple-kubernetes-frontend-backend-service-on-google-cloud-platform-85eb0346f600
 
-This works!!!!
+
 
 
 gcloud config set project jenkins-187820
