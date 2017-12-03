@@ -37,7 +37,7 @@ kubectl delete -f  be-rc.yaml
 
 
 
-
+Jenkins stuff
 
 
 
